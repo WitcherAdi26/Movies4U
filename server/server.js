@@ -5,6 +5,7 @@ import morgan from "morgan";
 import connectDB from "./config/db.js";
 import authRouter from "./routes/authRoutes.js";
 import moviesRouter from "./routes/moviesRoutes.js";
+import checkRedisClient from "./middlewares/checkRedisClient.js";
 
 const app=express();
 
