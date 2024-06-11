@@ -28,7 +28,7 @@ const App = () => {
     const [loading,setLoading]=useState(1);
 
     const fetchMovies=async()=>{
-        const response=await axios.get("process.env.BASE_URL/api/movies/");
+        const response=await axios.get("https://movies4u-idc6.onrender.com/api/movies/");
         const data=await response.data;
         setMovies(data.data);
         localStorage.setItem('movies', data);// caching all movies data to client storage.
