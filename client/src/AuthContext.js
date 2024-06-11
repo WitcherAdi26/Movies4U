@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
         try {
             const token = localStorage.getItem('token');
             if (token) {
-                const response=await axios.get('http://localhost:4000/api/auth/protected', {
+                const response=await axios.get('https://movies4u-idc6.onrender.com/api/auth/protected', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            const response = await axios.post('http://localhost:4000/api/auth/login', { email, password });
+            const response = await axios.post('https://movies4u-idc6.onrender.com/api/auth/login', { email, password });
             if(response.status!==200){
                 throw response.json
             }
@@ -53,7 +53,7 @@ export const AuthProvider = ({ children }) => {
 
     const register = async (username, email, password) => {
         try {
-            const response=await axios.post('http://localhost:4000/api/auth/register', { username, email, password });
+            const response=await axios.post('https://movies4u-idc6.onrender.com/api/auth/register', { username, email, password });
             if(response.status!==202){
                 throw response.json
             }
