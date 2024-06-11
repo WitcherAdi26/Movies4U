@@ -1,4 +1,3 @@
-// src/components/Profile.js
 import React from 'react';
 import { useAuth } from '../AuthContext';
 import './Profile.css';
